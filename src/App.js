@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import  { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg'
+import  { createFFmpeg } from '@ffmpeg/ffmpeg'
 import { useEffect, useState } from 'react';
 const ffmpeg = createFFmpeg({log:true});
 function App() {
@@ -10,6 +9,7 @@ function App() {
     setReady(true);
   }
   useEffect(()=>{
+    console.log("ready",ready)
     load();
   },[])
   return (
